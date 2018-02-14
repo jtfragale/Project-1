@@ -3,13 +3,13 @@ body {
     background-size: cover;
 }
 
-h1 {
+.mainTitle {
     font-size: 50px;
     text-align: center;
     color: white;
 }
 
-h2 {
+.category {
     font-size: 30px;
     text-align: center;
     color: white;
@@ -29,6 +29,19 @@ h2 {
     text-align: center;
     border-radius: 10px;
     opacity: .7;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 12pt;
+    margin-bottom: 0px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 10pt;
 }
 
 button {
