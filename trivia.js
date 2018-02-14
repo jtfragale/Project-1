@@ -74,6 +74,15 @@ fill in the page with the new question and answers)
 // var for score
 let i = 0;
 
+
+
+// window.addEventListener('load', promptName)
+
+// function promptName () {
+//     prompt('Please Enter Your Name')
+// if ()
+// }
+
 var gameQuestion = document.querySelector('.question')
 var gameAnswerA = document.querySelector('.optionA')
 var gameAsnwerB = document.querySelector('.optionB')
@@ -81,6 +90,12 @@ var gameAnswerC = document.querySelector('.optionC')
 var gameAnswerD = document.querySelector('.optionD')
 var gameButton = document.querySelector('button')
 var answerButton = document.querySelector('.container-two')
+var enterName = document.querySelector('.insert-name')
+var enterScore = document.querySelector('.insertScore')
+
+var name = prompt('Please Enter Your Name')
+
+enterName.innerText = name
 
 gameButton.addEventListener('click', startGame)
 
@@ -109,7 +124,9 @@ function selectAnswer () {
     } else {
         alert('Try Again')
     }
-    startGame()
-    // increase i
-    // startGame()
+    if( i < gameQuestions.length) {
+     startGame()  
+    } else {
+       alert('Game Over!')
+    }
 }
