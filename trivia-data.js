@@ -1,6 +1,6 @@
 const gameQuestions = [
     {
-        question: "Dory, or this type of fish, helped Marlin rescue Nemo in 'Finding Nemo', but probably doesn't remember",
+        question: "Dory, or this type of fish, helped Marlin rescue Nemo in 'Finding Nemo', but probably doesn't remember.",
         options: [
             "Clownfish",
             "Blue Hippo Tang",
@@ -20,7 +20,7 @@ const gameQuestions = [
         correctAnswer: "Whale Shark"
     },
     {
-        question: "This type of fish has a beak that helps it grind up coral and coralline algae and as a result poops sand",
+        question: "This type of fish has a beak that helps it grind up coral and coralline algae and as a result poops sand.",
         options: [
             "Squirrelfish",
             "Engineer Goby",

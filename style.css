@@ -4,15 +4,19 @@ body {
 }
 
 .mainTitle {
+    font-family: Tahoma, Geneva, sans-serif;
     font-size: 50px;
     text-align: center;
     color: white;
+    margin-top: 40px;
 }
 
 .category {
+    font-family: Tahoma, Geneva, sans-serif;
     font-size: 30px;
     text-align: center;
     color: white;
+    margin-top: 30px;
 }
 
 .container-one {
