@@ -26,7 +26,7 @@ const gameQuestions = [
             "Shark",
             "Pufferfish"
         ],
-        correctAnswer: 1
+        correctAnswer: "Blue Hippo Tang"
     },
     {
         question: "What is the largest living cartilaginous fish?",
@@ -71,6 +71,7 @@ const gameQuestions = [
 ]
 
 let currentQuestionIndex = 0;
+// var for score
 
 var gameQuestion = document.querySelector('.question')
 var gameAnswerA = document.querySelector('.optionA')
@@ -78,6 +79,7 @@ var gameAsnwerB = document.querySelector('.optionB')
 var gameAnswerC = document.querySelector('.optionC')
 var gameAnswerD = document.querySelector('.optionD')
 var gameButton = document.querySelector('button')
+var answerButton = document.querySelector('.container-two')
 
 gameButton.addEventListener('click', startGame)
 
@@ -88,3 +90,25 @@ function startGame () {
     gameAnswerC.innerHTML = gameQuestions[currentQuestionIndex].options[2]
     gameAnswerD.innerHTML = gameQuestions[currentQuestionIndex].options[3]
 }
+
+gameAnswerA.addEventListener('click', selectAnswer)
+gameAsnwerB.addEventListener('click', selectAnswer)
+gameAnswerC.addEventListener('click', selectAnswer)
+gameAnswerD.addEventListener('click', selectAnswer)
+
+function selectAnswer () {
+        // console.log(this.innerHTML)
+        // console.log(gameQuestions[currentQuestionIndex].options)
+        // console.log(gameQuestions[currentQuestionIndex].correctAnswer)
+    if (this.innerHTML === gameQuestions[currentQuestionIndex].correctAnswer) {
+        alert('Correct!')
+        // increase score
+        // find score element, display current score
+    } else {
+        alert('Try Again')
+    }
+    // increase currentQuestionIndex
+    // startGame()
+}
+
+// 
