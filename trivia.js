@@ -36,7 +36,7 @@ const gameQuestions = [
             "Great White Shark",
             "Giant Manta Ray"
         ],
-        correctAnswer: 0
+        correctAnswer: "Whale Shark"
     },
     {
         question: "This type of fish has a beak that helps it grind up coral and coralline algae and as a result poops sand",
@@ -46,7 +46,7 @@ const gameQuestions = [
             "Parrotfish",
             "Jawfish"
     ],
-        correctAnswer: 2
+        correctAnswer: "Parrotfish"
     },
     {
         question: "This fish forms a symbiotic relationship with sea anemones, where it spends most of its life. It's pretty hilarious ",
@@ -56,7 +56,7 @@ const gameQuestions = [
             "Clownfish",
             "Squirrelfish"
     ],
-        correctAnswer: 2
+        correctAnswer: "Clownfish"
     },
     {
         question: "What is the largest living bony fish?",
@@ -66,11 +66,12 @@ const gameQuestions = [
             "Giant Trevally",
             "Sunfish"
     ],
-        correctAnswer: 3
+        correctAnswer: "Sunfish"
     }
 ]
 
-let currentQuestionIndex = 0;
+// let currentQuestionIndex = i;
+let i = 0;
 // var for score
 
 var gameQuestion = document.querySelector('.question')
@@ -84,11 +85,11 @@ var answerButton = document.querySelector('.container-two')
 gameButton.addEventListener('click', startGame)
 
 function startGame () {
-    gameQuestion.innerHTML = gameQuestions[currentQuestionIndex].question
-    gameAnswerA.innerHTML = gameQuestions[currentQuestionIndex].options[0]
-    gameAsnwerB.innerHTML = gameQuestions[currentQuestionIndex].options[1]
-    gameAnswerC.innerHTML = gameQuestions[currentQuestionIndex].options[2]
-    gameAnswerD.innerHTML = gameQuestions[currentQuestionIndex].options[3]
+    gameQuestion.innerHTML = gameQuestions[i].question
+    gameAnswerA.innerHTML = gameQuestions[i].options[0]
+    gameAsnwerB.innerHTML = gameQuestions[i].options[1]
+    gameAnswerC.innerHTML = gameQuestions[i].options[2]
+    gameAnswerD.innerHTML = gameQuestions[i].options[3]
 }
 
 gameAnswerA.addEventListener('click', selectAnswer)
@@ -100,13 +101,16 @@ function selectAnswer () {
         // console.log(this.innerHTML)
         // console.log(gameQuestions[currentQuestionIndex].options)
         // console.log(gameQuestions[currentQuestionIndex].correctAnswer)
-    if (this.innerHTML === gameQuestions[currentQuestionIndex].correctAnswer) {
+    if (this.innerHTML === gameQuestions[i].correctAnswer) {
         alert('Correct!')
+        i++   
         // increase score
         // find score element, display current score
     } else {
         alert('Try Again')
     }
+    
+    startGame()
     // increase currentQuestionIndex
     // startGame()
 }
