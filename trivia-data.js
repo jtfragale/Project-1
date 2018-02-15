@@ -48,5 +48,25 @@ const gameQuestions = [
             "Sunfish"
     ],
         correctAnswer: "Sunfish"
+    },
+    {
+        question: "This large, scaleless fish has a long bill that it uses to slash prey",
+        options: [
+            "Needle Nose Gar",
+            "Hammerhead Shark",
+            "Swordfish",
+            "Grouper"
+    ],
+        correctAnswer: "Swordfish"
+    },
+    {
+        question: "This fish has an elongated snout and is named after the four legged animal it resembles. They have a prehensile tail and make a 'snick' sound when feeding on prey.",
+        options: [
+            "Squirrelfish",
+            "Seahorse",
+            "Lionfish",
+            "Goatfish"
+    ],
+        correctAnswer: "Seahorse"
     }
 ]
