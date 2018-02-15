@@ -68,5 +68,15 @@ const gameQuestions = [
             "Goatfish"
     ],
         correctAnswer: "Seahorse"
+    },
+    {
+        question: "This fish is able to quickly inflate its body to deter predators and also contains tetrodotoxin in case their first line of defense fails ",
+        options: [
+            "Pufferfish",
+            "Grouper",
+            "Damselfish",
+            "Clownfish"
+    ],
+        correctAnswer: "Pufferfish"
     }
 ]

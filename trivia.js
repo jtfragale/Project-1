@@ -39,9 +39,6 @@ function selectAnswer () {
         i++   
         score += 1
         enterScore.innerText = score
-        
-        // add class to gamequestions[i] like `.is-correct`
-
     } else {
         alert('Try Again')
     }
