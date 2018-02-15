@@ -1,15 +1,5 @@
-/*
-1. need some way of tracking which question we're on, which
-will correlate to the index for the curent question in our
-questions array.
-2. event listener for the options that checks if the answer is correct,
-updates the score, moves to next question (increment the index value and
-fill in the page with the new question and answers)
-3. make event listener for container-two and then target answer options
-*/
-
-// let currentQuestionIndex = i;
-// var for score
+(function iffe() {
+    
 let i = 0;
 
 var gameQuestion = document.querySelector('.question')
@@ -22,10 +12,11 @@ var answerButton = document.querySelector('.container-two')
 var enterName = document.querySelector('.insert-name')
 var enterScore = document.querySelector('.insert-score')
 
-var name = prompt('Hello! Please Enter Your Name')
+var name = prompt('Hello! Please Enter Your Name') || ''
 var score = 0
 
 enterName.innerText = name
+
 
 gameButton.addEventListener('click', startGame)
 
@@ -43,22 +34,21 @@ gameAnswerC.addEventListener('click', selectAnswer)
 gameAnswerD.addEventListener('click', selectAnswer)
 
 function selectAnswer () {
-        // console.log(this.innerHTML)
-        // console.log(gameQuestions[i].options)
-        // console.log(gameQuestions[i].correctAnswer)
     if (this.innerHTML === gameQuestions[i].correctAnswer) {
         alert('Correct!')
         i++   
         score += 1
         enterScore.innerText = score
-        // increase score
-        // find score element, display current score
+        
+        // add class to gamequestions[i] like `.is-correct`
+
     } else {
         alert('Try Again')
     }
     if( i < gameQuestions.length) {
-     startGame()  
+        startGame()  
     } else {
-       alert('Game Over!')
+        alert('Game Over!')
     }
 }
+})()

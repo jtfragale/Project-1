@@ -30,7 +30,7 @@ const gameQuestions = [
         correctAnswer: "Parrotfish"
     },
     {
-        question: "This fish forms a symbiotic relationship with sea anemones, where it spends most of its life. It's pretty hilarious.",
+        question: "This fish forms a symbiotic relationship with sea anemones where it spends most of its life, and it's pretty hilarious.",
         options: [
             "Dracula Goby",
             "Cardinalfish",
