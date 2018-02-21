@@ -37,9 +37,9 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 0;
+    margin: 0;
+    /* can combine margin top and bottom */
     font-size: 12pt;
-    margin-bottom: 0px;
 }
 
 h2 {
@@ -58,6 +58,7 @@ button {
     border-radius: 10px;
     opacity: .7;
 }
+/* You could make a separate class for everything that will be background white and opacity .7, and apply that class to each element. That way, you are defining it once, for more efficient CSS code. */
 
 .score {
     background: white;
@@ -74,11 +75,10 @@ button {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    margin-top: 100px;
+    margin: 100px 20% 0 20%;
+    /* this will apply margin specs in order to: top, right, bottom, left */
     background: white;
     color: black;
-    margin-right: 20%;
-    margin-left: 20%;
     height: 80px;
     border-radius: 10px;
     opacity: .8;
@@ -94,7 +94,7 @@ button {
     text-align: center;
 }
 
-.optionA {
+.answer {
     background: white;
     color: black;
     height: 20px;
@@ -104,39 +104,7 @@ button {
     margin: 5px;
     opacity: .8;
 }
-
-.optionB {
-    background: white;
-    color: black;
-    height: 20px;
-    border-radius: 10px;
-    width: 40%;
-    padding: 10px;
-    margin: 5px;
-    opacity: .8;
-}
-
-.optionC {
-    background: white;
-    color: black;
-    height: 20px;
-    border-radius: 10px;
-    width: 40%;
-    padding: 10px;
-    margin: 5px;
-    opacity: .8;
-}
-
-.optionD {
-    background: white;
-    color: black;
-    height: 20px;
-    border-radius: 10px;
-    width: 40%;
-    padding: 10px;
-    margin: 5px;
-    opacity: .8;
-}
+/* apply CSS code to all answer choices at one to eliminate repetition */
 
 .answer:hover {
     background-color: #FFFE4C;
