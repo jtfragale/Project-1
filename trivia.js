@@ -40,7 +40,8 @@ function selectAnswer () {
         score += 1
         enterScore.innerText = score
     } else {
-        alert('Try Again')
+        alert('Wrong')
+        i++
     }
     if( i < gameQuestions.length) {
         startGame()  
